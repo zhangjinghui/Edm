@@ -1,0 +1,43 @@
+<c3p0-config>
+
+	<!-- C3P0的缺省(默认)配置， -->
+	<!-- 如果在代码中“ComboPooledDataSourceds = new ComboPooledDataSource();”这样写就表示使用的是C3P0的缺省(默认)配置信息来创建数据源 -->
+
+	<default-config>
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">jdbc:mysql://localhost:3306/edm
+		</property>
+		<property name="user">root</property>
+		<property name="password">zhangjinghui</property>
+		<!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。Default:3 -->
+		<property name="acquireIncrement">5</property>
+		<!--初始化的连接数，取值应在minPoolSize与maxPoolSize之间。Default: 3 -->
+		<property name="initialPoolSize">10</property>
+		<!--连接池中保留的最小连接数 -->
+		<property name="minPoolSize">5</property>
+		<!--连接池中保留的最大连接数。Default:15 -->
+		<property name="maxPoolSize">20</property>
+		<!--定义在从数据库获取新连接失败后重复尝试的次数。Default: 30 -->
+		<property name="acquireRetryAttempts">30</property>
+		<!--两次连接中间隔时间，单位毫秒。Default: 1000 -->
+		<property name="acquireRetryDelay">1000</property>
+		<!--连接关闭时默认将所有未提交的操作回滚。Default: false -->
+		<property name="autoCommitOnClose">false</property>
+	</default-config>
+
+	<!-- C3P0的命名配置， -->
+	<!-- 如果在代码中“ComboPooledDataSourceds = new ComboPooledDataSource("MySQL");”这样写就表示使用的是name是MySQL的配置信息来创建数据源 -->
+
+	<named-config name="MySQL">
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">jdbc:mysql://localhost:3306/edm?useUnicode=true&amp;characterEncoding=utf-8
+		</property>
+		<property name="user">root</property>
+		<property name="password">zhangjinghui</property>
+		<property name="acquireIncrement">5</property>
+		<property name="initialPoolSize">10</property>
+		<property name="minPoolSize">5</property>
+		<property name="maxPoolSize">20</property>
+	</named-config>
+
+</c3p0-config>  

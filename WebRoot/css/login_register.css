@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+.loginMain{
+	width:400px;
+	height:300px;
+	margin:0 auto;
+	margin-top:100px;
+}
+ #loginOrRegister{
+	 background-color:#09C; 
+	 padding:0px; 
+	 margin:-2px;"
+ }

@@ -1,0 +1,91 @@
+body {
+	margin:0; 
+	padding:0; 
+	font:12px "\5B8B\4F53",san-serif;
+	background: #FAFAFA;
+}
+div,dl,dt,dd,ul,ol,li,
+h1,h2,h3,h4,h5,h6,
+pre,form,fieldset,
+input,textarea,blockquote,p{
+	padding:0; 
+	margin:0;
+}   
+table,td,tr,th{
+	font-size:12px;
+}
+li{
+	list-style-type:none;
+}
+img{
+	vertical-align:top;
+	border:0;
+}
+ol,ul {
+	list-style:none;
+}
+a:link,a:visited{ 
+	text-decoration:none;
+}
+
+/*菜单个性设置*/
+.box{
+	width:180px;
+	margin:0px;
+    repeat-y:left top;
+}
+.box ul{
+	list-style:none;
+	text-align:left;
+}
+
+.menu li.level1{
+	border-bottom: solid 1px #ccc;
+}
+/*一级菜单*/
+.menu li.level1 a{
+	display:block;
+	line-height:50px;
+	height:50px;
+	padding-left:50px; 
+	font-size:14px;
+	color:#fff;
+	/*background:url(../images/bg1.gif) no-repeat left top;*/
+	background-color: #959BA2;
+}
+/*一级菜单两态样式,供JS调用*/
+.menu li.level1 a.hove{
+	/*background:url(../images/bg.gif) no-repeat left top;*/
+	background-color: #2D2D2D;
+}
+.menu li.level1 a.cur{
+	/*background:url(../images/bg2.gif) no-repeat left top;*/
+	background-color: #555555;
+}
+/*二级菜单*/
+.menu li ul{
+	overflow:hidden;
+}
+.menu li ul.level2{
+	width:180px;
+	display:none;
+}
+.menu li ul.level2 li{
+	height:45px;
+	line-height:45px;
+}
+.menu li ul.level2 li a{
+	display:block;
+	height:45px;
+	line-height:45px;
+	background:#E7E3E7 url(../images/t1.gif) no-repeat 30px center;
+	padding-left:50px;
+	color:#363636;
+	border-top:1px #ccc solid;
+	overflow:hidden;
+}
+/*二级菜单两态样式,供JS调用*/
+.menu li ul.level2 li a.hove1{
+	background:#F6F6F6 url(../images/t2.gif) no-repeat 30px center;
+	color:#000;
+}
